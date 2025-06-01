@@ -1,4 +1,5 @@
 ﻿using CustomBasicAuth.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace CustomBasicAuth.Data
@@ -9,5 +10,6 @@ namespace CustomBasicAuth.Data
 
         public DbSet<User> Users { get; set; }
     }
+
 
 }
