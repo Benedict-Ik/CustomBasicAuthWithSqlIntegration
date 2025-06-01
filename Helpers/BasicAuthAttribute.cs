@@ -51,7 +51,7 @@ namespace CustomBasicAuth.Helpers
             var helper = new PasswordHashHelper();
             if (!helper.VerifyPassword(user, password))
             {
-                SetUnauthorizedResult(context, logger, controller, action, "Invalid password");
+                SetUnauthorizedResult(context, logger, controller, action, "Invalid credentials");
                 return;
             }
 

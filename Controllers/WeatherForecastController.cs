@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CustomBasicAuth.Controllers
 {
+    [BasicAuth]
     [ApiController]
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase

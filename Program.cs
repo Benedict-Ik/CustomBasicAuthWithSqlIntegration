@@ -15,11 +15,11 @@ builder.Services.AddSwaggerGen(c =>
 {
     c.AddSecurityDefinition("Basic", new OpenApiSecurityScheme
     {
-        Description = "Enter 'Basic' [space] and then your generated encoded Base64 credentialsn.\n\nExample: Basic dXNlcm5hbWU6cGFzc3dvcmQ='",
         Name = "Authorization",
         In = ParameterLocation.Header,
         Type = SecuritySchemeType.ApiKey,
-        Scheme = "Basic"
+        Scheme = "Basic",
+        Description = "Enter 'Basic' [space] and then your generated encoded Base64 credentials.\n\nExample: Basic dXNlcm5hbWU6cGFzc3dvcmQ='",
     });
 
     c.AddSecurityRequirement(new OpenApiSecurityRequirement{

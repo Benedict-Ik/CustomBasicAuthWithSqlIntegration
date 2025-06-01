@@ -150,7 +150,7 @@
     "securitySchemes": {
       "Basic": {
         "type": "apiKey",
-        "description": "Enter 'Basic' [space] and then your generated encoded Base64 credentialsn.\n\nExample: Basic dXNlcm5hbWU6cGFzc3dvcmQ='",
+        "description": "Enter 'Basic' [space] and then your generated encoded Base64 credentials.\n\nExample: Basic dXNlcm5hbWU6cGFzc3dvcmQ='",
         "name": "Authorization",
         "in": "header"
       }
