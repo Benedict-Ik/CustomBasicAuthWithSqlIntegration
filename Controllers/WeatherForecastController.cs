@@ -1,3 +1,4 @@
+using CustomBasicAuth.Helpers;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CustomBasicAuth.Controllers
