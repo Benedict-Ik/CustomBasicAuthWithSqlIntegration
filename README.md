@@ -1,9 +1,13 @@
 # Custom Basic Auth 
 
-Here, we installed the below packages:
+Here, we created a `Models` folder that will house our `User` model with properties below:
+```C#
+public class User
+{
+    public int Id { get; set; }
+    public string Username { get; set; }
+    public string PasswordHash { get; set; }
+}
+```
 
-1. **Microsoft.EntityFrameworkCore.Tools (v 8.0.16)**  
-This package provides tools for Entity Framework Core, allowing you to run migrations and manage your database schema.
-
-1. **Microsoft.EntityFrameworkCore.SqlServer (v 8.0.16)**  
-This package is the SQL Server database provider for Entity Framework Core, enabling you to interact with SQL Server databases.
+We also created a `Data` folder that will house our `AppDbContext` class, which is a subclass of `DbContext` and contains a `DbSet<User>` property to represent the users in our database.
