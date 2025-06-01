@@ -1,11 +1,9 @@
 # Custom Basic Auth 
 
-Here, we created a `Models` folder that will house our `User` model with properties below:
-```C#
-public class User
-{
-    public int Id { get; set; }
-    public string Username { get; set; }
-    public string PasswordHash { get; set; }
+Here, we created a new database in SqlServer and added the connection strings to our appsettings.json file.
+
+```Json
+"ConnectionStrings": {
+    "DefaultConnection": "Server=BENEDICT-IK\\SQLEXPRESS;Database=Custom_Basic_Auth_with_Sql_Integration;Trusted_Connection=True;TrustServerCertificate=true"
 }
 ```
