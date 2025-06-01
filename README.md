@@ -29,7 +29,7 @@ Here we secured the default Web API controller class `WeatherForecast` with a cu
 7. **Swagger Authorization**
 ![Image 7](Images/Image-7.png)
 
-8. Protected endpoint's successful response
+8. **Protected endpoint's successful response**
 ![Image 8](Images/Image-8.png)
 
 9. **Protected endpoint's failed response**

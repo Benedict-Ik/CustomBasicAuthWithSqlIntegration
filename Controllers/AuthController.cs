@@ -19,7 +19,6 @@ namespace CustomBasicAuth.Controllers
         [HttpPost("register")]
         public async Task<IActionResult> Register(AuthDto model)
         {
-            var success = await _authService.RegisterAsync(model.Username, model.Password);
             
             if (!char.IsUpper(model.Username[0]))
                 return BadRequest("Username must start with a capital letter.");
@@ -27,6 +26,8 @@ namespace CustomBasicAuth.Controllers
             // Validate password strength
             if (!ValidatePassword(model.Password))
                 return BadRequest("Password does not meet security requirements: at least 1 uppercase, 1 lowercase, 1 digit, 1 special character, minimum 8 characters.");
+            
+            var success = await _authService.RegisterAsync(model.Username, model.Password);
 
             if (!success)
                 return BadRequest("Username already exists.");
@@ -43,7 +44,8 @@ namespace CustomBasicAuth.Controllers
 
             return Ok(new { 
                 Message = $"{model.Username} has successfully logged in.",
-                Token = token });
+                Token = token 
+            });
         }
 
 
