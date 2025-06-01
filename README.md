@@ -10,4 +10,4 @@ public class User
 }
 ```
 
-We also created a `Data` folder that will house our `AppDbContext` class, which is a subclass of `DbContext` and contains a `DbSet<User>` property to represent the users in our database.
+We also created a `Data` folder that will house our `AppDbContext` class, which extends `IdentityDbContext\<User>`, and contains a `DbSet<User>` property to represent the users in our database.
